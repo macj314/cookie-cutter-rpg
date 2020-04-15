@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from 'jquery';
 import { Character } from './char';
-// import { startGame } from './thing.js';
+import { Battle } from './battle';
+
 
 
 
@@ -23,21 +24,24 @@ $(document).ready(function(){
 
   $("#create").click(function(event){
     event.preventDefault();
+    $("#create").hide();
+    $("#attack").show();
+    $("#char-creation").hide();
     
-    let name = ("#name");
-    let profession = ("#profession");
-    let strength = ("#strength");
-    let intelligence = ("#intelligence");
-    let dexterity = ("#dexterity");
+    let name = $("#name").val();
+    let profession = $("#profession").val();
+    let strength = $("#strength").val();
+    let intelligence = $("#intelligence").val();
+    let dexterity = $("#dexterity").val();
 
-    let playerChar = new Character( name.val(), profession.val(), strength.val(), intelligence.val(), dexterity.val());
-    $("#player-stats").text(displayCharacter(playerChar));
-    // $("#player-name").text("Name: " + playerChar.name);
-    // $("#player-profession").text("Profession: " + playerChar.profession);
-    // $("#player-strength").text("Strength: " + playerChar.strength);
-    // $("#player-intelligence").text("Intelligence: " + playerChar.intelligence);
-    // $("#player-dexerity").text("Name: " + playerChar.dexterity);
-
+    let playerChar = new Character( name, profession, strength, intelligence, dexterity);
+    $("#player-stats").text(playerChar.displayCharacter());
   });
+
+
+  $("#attack").click(function(event){
+      event.preventDefault();
+      attack();
+  })
 
 });
