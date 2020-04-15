@@ -1,5 +1,8 @@
 body{
     text-align: center;
+    background-color:  #043247;
+    color: whitesmoke;
+    font-family: monaco,Consolas,Lucida Console,monospace; 
     
 }
 
@@ -18,8 +21,17 @@ body{
     display: none;
 }
 
-#mage-img, #rouge-img, #knight-img, #ranger-img{
+#mage-img, #rouge-img, #knight-img, #ranger-img, #monster-img{
     display: none;
     width: 25%;
     height: 25%;
+}
+
+#char-display{
+    display: none;
+}
+
+#monster-img{
+    transform: rotateY(180deg);
+    float: right;
 }

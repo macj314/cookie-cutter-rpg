@@ -9,7 +9,7 @@
 
 
 
-<h1>Hello</h1>
+<h1>Cookie Cutter RPG Game</h1>
   <button id="startTheGame">Start the Game</button>
 
   <div id="char-creation">
@@ -30,28 +30,33 @@
     <input type="number" name="dexterity" id="dexterity" min="1" max="10" required >
   </div>
 
-  <div>
-    <img id="rouge-img" src="https://cdn2.scratch.mit.edu/get_image/user/35825441_60x60.png">
-    <img id="ranger-img" src="https://i.imgur.com/kJtPrT0.gif">
-    <img id="knight-img" src="https://i.pinimg.com/originals/2c/78/79/2c7879557f1cab6d9c3eef2744b7b124.gif">
-    <img id="mage-img" src="https://cdn.pixilart.com/photos/large/39a2a3f8b412f19.gif">
-  </div>
+  <img id="monster-img" src="https://i.pinimg.com/originals/ff/bc/75/ffbc753e1e40fe35df874b6b685b253b.gif">
+ 
+    <div id="char-display">
+      <h2>Your Adventurer</h2>
+      <div class="row char-row">
+          <img id="rouge-img" src="https://cdn2.scratch.mit.edu/get_image/user/35825441_60x60.png">
+          <img id="ranger-img" src="https://i.imgur.com/kJtPrT0.gif">
+          <img id="knight-img" src="https://i.pinimg.com/originals/2c/78/79/2c7879557f1cab6d9c3eef2744b7b124.gif">
+          <img id="mage-img" src="https://cdn.pixilart.com/photos/large/39a2a3f8b412f19.gif">
+          <div class="col-md-2">
+            <div id="name-display"></div>
+            <div id="strength-display"></div>
+            <div id="int-display"></div> 
+            <div id="dext-display"></div>    
+            <div id="mana-display"></div>
+            <div id="health-display"></div>
+            <div id="inv-display"></div>
+          </div>
+      </div>
+    </div>
+    
+     
+       
+       
+     
 
 
-
-
-  <div id="char-display">
-    <p id="name-display"></p>
-    <p id="prof-display"></p>
-    <p id="level-display"></p>
-    <p id="strength-display"></p>
-    <p id="int-display"></p>
-    <p id="dext-display"></p>
-    <p id="mana-display"></p>
-    <p id="health-display"></p>
-    <p id="inv-display"></p>
-   
-  </div>
 
 <button id="create">Create</button>
 
@@ -59,6 +64,7 @@
 
 
 <div id="player-stats"></div>
+
 <button id="attack">attack</button>
 
 

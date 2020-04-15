@@ -29,14 +29,14 @@ export class Character {
 }
 
 // export class Enemy {
-//   constructor(name, strength, intelligence, dexterity) {
+//   constructor(name, level, strength, intelligence, dexterity, health, mana) {
 //     this.name = name;
-//     this.level = 1;
+//     this.level = level;
 //     this.stats = {
-//       health: 20,
-//       mana: 15,
 //       strength: strength,
 //       intelligence: intelligence,
 //       dexterity: dexterity
+//       health: health,
+//       mana: mana,
 //   };
 // }

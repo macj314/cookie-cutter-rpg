@@ -21,22 +21,35 @@ $(document).ready(function(){
   function showImg() {
     if(player.profession == "Rouge"){
       $("#rouge-img").show();
+       $("#monster-img").show();
     }
     if(player.profession == "Ranger"){
       $("#ranger-img").show();
+       $("#monster-img").show();
     }
     if(player.profession == "Knight"){
       $("#knight-img").show();
+      $("#monster-img").show();
     }
     if(player.profession == "Mage"){
       $("#mage-img").show();
+      $("#monster-img").show();
     }
   }
 
+  // $('select').change(function(){
+  //   if (player.profession == "Rouge"){
+  //       $("#rougie-img").show();
+  //   }
+
+
+  // })
+
+
+
+
   function displayCharacter(player){
-    $("#name-display").text(`Name: ${player.name}`);
-    $("#prof-display").text(`Profession: ${player.profession}`);
-    $("#level-display").text(`Level: ${player.level}`);
+    $("#name-display").text( `${player.name},` + ` ` +  `Level ${player.level}` + ` ` + `${player.profession}`);
     $("#strength-display").text(`Strength: ${player.stats.strength}`);
     $("#int-display").text(`Intelligence: ${player.stats.intelligence}`);
     $("#dext-display").text(`Dexterity: ${player.stats.dexterity}`);
@@ -60,8 +73,9 @@ $(document).ready(function(){
     event.preventDefault();
     player = new Character($("#name").val(), $("#profession").val(),   $("#strength").val(), $("#intelligence").val(), $("#dexterity").val());
     $("#create").hide();
-    $("#attack").show();
     $("#char-creation").hide();
+    $("#attack").show();
+    $("#char-display").show();
     displayCharacter(player);
     showImg(player);
     console.log(player);
