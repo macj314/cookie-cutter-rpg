@@ -25,25 +25,18 @@ export class Character {
     this.stats.dexterity +=1;
     this.stats.health += 10;
     this.stats.mana += 10;
-  }
-  
-  showImg(){
-    if(this.profession.value == "rouge"){
-      $("#rouge").show();
-    }
-    if(this.profession.value == "ranger"){
-      $("#ranger").show();
-    }
-    if(this.profession.value == "knight"){
-      $("#knight").show();
-    }
-    if(this.profession.value == "mage"){
-      $("#mage").show();
-    }
-  }
-
-
-
-
-
+  }    
 }
+
+// export class Enemy {
+//   constructor(name, strength, intelligence, dexterity) {
+//     this.name = name;
+//     this.level = 1;
+//     this.stats = {
+//       health: 20,
+//       mana: 15,
+//       strength: strength,
+//       intelligence: intelligence,
+//       dexterity: dexterity
+//   };
+// }

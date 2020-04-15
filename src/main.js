@@ -17,12 +17,26 @@ import { Character } from './char';
 
 $(document).ready(function(){
   let player;
- 
+
+  function showImg() {
+    if(player.profession == "Rouge"){
+      $("#rouge-img").show();
+    }
+    if(player.profession == "Ranger"){
+      $("#ranger-img").show();
+    }
+    if(player.profession == "Knight"){
+      $("#knight-img").show();
+    }
+    if(player.profession == "Mage"){
+      $("#mage-img").show();
+    }
+  }
 
   function displayCharacter(player){
     $("#name-display").text(`Name: ${player.name}`);
     $("#prof-display").text(`Profession: ${player.profession}`);
-    $("#level-display").text(`Level: ${player.level}`)
+    $("#level-display").text(`Level: ${player.level}`);
     $("#strength-display").text(`Strength: ${player.stats.strength}`);
     $("#int-display").text(`Intelligence: ${player.stats.intelligence}`);
     $("#dext-display").text(`Dexterity: ${player.stats.dexterity}`);
@@ -48,32 +62,8 @@ $(document).ready(function(){
     $("#create").hide();
     $("#attack").show();
     $("#char-creation").hide();
-    console.log(player)
-   
     displayCharacter(player);
-  });
+    showImg(player);
+    console.log(player);
+  });   
 });
-    
-    
-    
-    
-    
-    
-    
-    
-    // let name = $("#name").val();
-    // let profession = $("#profession").val();
-    // let strength = $("#strength").val();
-    // let intelligence = $("#intelligence").val();
-    // let dexterity = $("#dexterity").val();
-
-    // let playerChar = new Character( name, profession, strength, intelligence, dexterity);
-    // $("#player-stats").text(playerChar.displayCharacter());
-
-
-
-//   $("#attack").click(function(event){
-//     event.preventDefault();
-//       attack();
-//   })
-
