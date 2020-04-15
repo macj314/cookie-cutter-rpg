@@ -28,15 +28,3 @@ export class Character {
   }    
 }
 
-// export class Enemy {
-//   constructor(name, level, strength, intelligence, dexterity, health, mana) {
-//     this.name = name;
-//     this.level = level;
-//     this.stats = {
-//       strength: strength,
-//       intelligence: intelligence,
-//       dexterity: dexterity
-//       health: health,
-//       mana: mana,
-//   };
-// }
