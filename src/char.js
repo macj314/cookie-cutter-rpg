@@ -1,30 +1,16 @@
 export class Character {
-  constructor(name, profession, level, stats) {
+  constructor(name, profession, strength, intelligence, dexterity) {
     this.name = name;
     this.profession = profession;
-    this.level = level;
+    this.level = 1;
     this.inventory = [];
     this.stats = {
       health: 100,
       mana: 100,
-      strength:  7,
-      intelligence:  6,
-      dexterity: 5,
-    };       
-  }
-
-  //Create the means in which a player could create a character
-  characterCreation(name, profession, stats){
-    let player;
-    player = new Character();
-    player.name = name;
-    player.stats.health = 100;
-    player.stats.mana = 100;
-    player.profession = profession;
-    player.stats.strength = strength;
-    player.stats.intelligence = intelligence;
-    player.stats.dexterity = dexterity;
-    return player;
+      strength: strength,
+      intelligence: intelligence,
+      dexterity: dexterity
+    };
   }
 
   heal(item){
@@ -40,10 +26,24 @@ export class Character {
     this.stats.health += 10;
     this.stats.mana += 10;
   }
-
-
-
   
+  showImg(){
+    if(this.profession.value == "rouge"){
+      $("#rouge").show();
+    }
+    if(this.profession.value == "ranger"){
+      $("#ranger").show();
+    }
+    if(this.profession.value == "knight"){
+      $("#knight").show();
+    }
+    if(this.profession.value == "mage"){
+      $("#mage").show();
+    }
+  }
+
+
+
 
 
 }

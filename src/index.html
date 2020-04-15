@@ -17,19 +17,17 @@
     <input type="text" name="name" id="name">
     <label for="profession">Profession</label>
     <select id="profession"> 
-      <option value="rouge">Rouge</option>
-      <option value="ranger">Ranger</option>
-      <option value="knight">Knight</option>
-      <option value="mage">Mage</option>
-
-
+      <option value="Rouge">Rouge</option>
+      <option value="Ranger">Ranger</option>
+      <option value="Knight">Knight</option>
+      <option value="Mage">Mage</option>
     </select>
     <label for="strength">Strength</label>
-    <input type="number" name="strength" id="strength" maxlength="1" size="1">
+    <input type="number" name="strength" id="strength" min="1" max="10" >
     <label for="intelligence">Intelligence</label>
-    <input type="number" name="intelligence" id="intelligence" maxlength="1" size="1">
+    <input type="number" name="intelligence" id="intelligence" min="1" max="10">
     <label for="dexterity">Dexterity</label>
-    <input type="number" name="dexterity" id="dexterity" maxlength="1" size="1">
+    <input type="number" name="dexterity" id="dexterity" min="1" max="10"  >
   </div>
 
   <div>
@@ -45,12 +43,14 @@
   <div id="char-display">
     <p id="name-display"></p>
     <p id="prof-display"></p>
+    <p id="level-display"></p>
     <p id="strength-display"></p>
     <p id="int-display"></p>
     <p id="dext-display"></p>
     <p id="mana-display"></p>
-    <p id="inv-display"></p>
     <p id="health-display"></p>
+    <p id="inv-display"></p>
+   
   </div>
 
 <button id="create">Create</button>
