@@ -16,3 +16,9 @@ body{
 #attack{
     display: none;
 }
+
+#mage-img, #rouge-img, #knight-img, #ranger-img{
+    display: none;
+    width: 25%;
+    height: 25%;
+}
