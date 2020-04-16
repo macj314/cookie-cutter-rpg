@@ -9,7 +9,7 @@ let char;
 
   beforeEach(() => {
     char = new Character();
-    char.stats.health = 80,
+    char.stats.health = 0,
     char.stats.intelligence = 2,
     char.stats.dexterity = 2,
     char.stats.strength = 2
@@ -23,15 +23,15 @@ let char;
    
 
 
-  test('Health should go up by 10', () => {
-    char.smallHeal();
-    expect(char.stats.health).toEqual(90)
-  });
+  // test('Health should go up by 10', () => {
+  //   char.smallHeal();
+  //   expect(char.stats.health).toEqual(90)
+  // });
 
-  test('Health should go up by 20', () => {
-    char.bigHeal();
-    expect( char.stats.health).toEqual (100);    
-  });
+  // test('Health should go up by 20', () => {
+  //   char.bigHeal();
+  //   expect( char.stats.health).toEqual (100);    
+  // });
 
   test('player stats increase', () => {
     char.levelUpTimer();
@@ -62,9 +62,12 @@ let char;
 
   test('if player health is 0 should be dead', () => {
 
+    char.checkPlayer();
+    expect(char.isAlive).toEqual(false);
 
 
-    
+
+
   })
     
 
