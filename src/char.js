@@ -22,7 +22,7 @@ export class Character {
     if(this.inv.potionOne >= 0){
       this.stats.health += 10;
       if(this.stats.health > 100){
-        this.stats.health = 100
+        this.stats.health = 100;
       }
     } else {
       this.stats.heal += 0;
@@ -33,11 +33,19 @@ export class Character {
   bigHeal(){
     if(this.inv.potionTwo >=0){
       this.stats.health += 20;
+      if(this.stats.healths > 100){
+        this.stats.health = 100
+      }
     } else {
       this.stats.health += 0;
       return true;
     }
+
+   
   }
+}
+
+
   // levelUp(){
   //   this.level += 1;
   //   this.stats.strength +=1;
@@ -47,4 +55,4 @@ export class Character {
   //   this.stats.mana += 10;
   // }    
 
-}
+
