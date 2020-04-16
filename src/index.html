@@ -6,96 +6,72 @@
   <title>Document</title>
 </head>
 <body>
-
-
-
-<h1>Cookie Cutter RPG Game</h1>
-  <button id="startTheGame">Start the Game</button>
-
-  <div id="char-creation">
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name" required>
-    <label for="profession">Profession</label>
-    <select id="profession" required> 
-      <option value="Rouge">Rouge</option>
-      <option value="Ranger">Ranger</option>
-      <option value="Knight">Knight</option>
-      <option value="Mage">Mage</option>
-    </select>
-    <p id="char-check">Use upwards of 15 points!!</p>
-    <label for="strength">Strength</label>
-    <input type="number" name="strength" id="strength" min="1" max="5" required >
-    <label for="intelligence">Intelligence</label>
-    <input type="number" name="intelligence" id="intelligence" min="1" max="5" required>
-    <label for="dexterity">Dexterity</label>
-    <input type="number" name="dexterity" id="dexterity" min="1" max="5" required >
-  </div>
-
-  
- 
-    <div id="char-display">
-      <h2>Your Adventurer</h2>
-      <div class="row char-row">
-        <div class="col-md-2">
-          <div id="name-display"></div>
-          <div id="strength-display"></div>
-          <div id="int-display"></div> 
-          <div id="dext-display"></div>    
-          <div id="mana-display"></div>
-          <div id="health-display"></div>
-          <div id="pot1-display"></div>
-          <div id="pot2-display"></div>
-          <br>
-          <button id="attack">attack</button>
-        </div>
-        <div class="col-md-2">
-          <button id="small-heal" type="button">Small Potion Heal</button>
-          <button id="big-heal" type="button">Large Potion Heal</button>
-        </div>
-          <img id="rouge-img" src="https://cdn2.scratch.mit.edu/get_image/user/35825441_60x60.png">
-          <img id="ranger-img" src="https://i.imgur.com/kJtPrT0.gif">
-          <img id="knight-img" src="https://i.pinimg.com/originals/2c/78/79/2c7879557f1cab6d9c3eef2744b7b124.gif">
-          <img id="mage-img" src="https://cdn.pixilart.com/photos/large/39a2a3f8b412f19.gif">
-          <img id="monster-img" src="https://i.pinimg.com/originals/ff/bc/75/ffbc753e1e40fe35df874b6b685b253b.gif">
-      <div id="enemy-display">
-        <div class="row-enemy">
-          <div class="col-md-2">
-            <div id="e-name-display"></div>
-            <div id="e-strength-display"></div>
-            <div id="e-int-display"></div> 
-            <div id="e-dext-display"></div>    
-            <div id="e-mana-display"></div>
-            <div id="e-health-display"></div>
-            <div id="e-pot1-display"></div>
-            <div id="e-pot2-display"></div>
-          </div>
-        </div>
-      </div>
-  </div>
+  <h1>Cookie Cutter RPG Game</h1>
+    <button id="startTheGame">Start the Game</button>
+    <div id="char-creation">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" required>
+      <label for="profession">Profession</label>
+      <select id="profession" required> 
+        <option value="Rouge">Rouge</option>
+        <option value="Ranger">Ranger</option>
+        <option value="Knight">Knight</option>
+        <option value="Mage">Mage</option>
+      </select>
+      <p id="char-check">Use upwards of 15 points!!</p>
+      <label for="strength">Strength</label>
+      <input type="number" name="strength" id="strength" min="1" max="5" required >
+      <label for="intelligence">Intelligence</label>
+      <input type="number" name="intelligence" id="intelligence" min="1" max="5" required>
+      <label for="dexterity">Dexterity</label>
+      <input type="number" name="dexterity" id="dexterity" min="1" max="5" required >
+    </div>
       
+    <div id="char-display">
+        <h2>Your Adventurer</h2>
+        <div class="row char-row">
+          <div class="col-md-2">
+            <div id="name-display"></div>
+            <div id="strength-display"></div>
+            <div id="int-display"></div> 
+            <div id="dext-display"></div>    
+            <div id="mana-display"></div>
+            <div id="health-display"></div>
+            <div id="pot1-display"></div>
+            <div id="pot2-display"></div>
+            <br>
+            <button id="attack">attack</button>
+          </div>
+          <div class="col-md-2">
+            <button id="small-heal" type="button">Small Potion Heal</button>
+            <button id="big-heal" type="button">Large Potion Heal</button>
+          </div>
+        <img id="rouge-img" src="https://cdn2.scratch.mit.edu/get_image/user/35825441_60x60.png">
+        <img id="ranger-img" src="https://i.imgur.com/kJtPrT0.gif">
+        <img id="knight-img" src="https://i.pinimg.com/originals/2c/78/79/2c7879557f1cab6d9c3eef2744b7b124.gif">
+        <img id="mage-img" src="https://cdn.pixilart.com/photos/large/39a2a3f8b412f19.gif">
+        <img id="monster-img" src="https://i.pinimg.com/originals/ff/bc/75/ffbc753e1e40fe35df874b6b685b253b.gif">
+          <div id="enemy-display">
+            <div class="row-enemy">
+              <div class="col-md-2">
+                <div id="e-name-display"></div>
+                <div id="e-strength-display"></div>
+                <div id="e-int-display"></div> 
+                <div id="e-dext-display"></div>    
+                <div id="e-mana-display"></div>
+                <div id="e-health-display"></div>
+                <div id="e-pot1-display"></div>
+                <div id="e-pot2-display"></div>
+              </div>
+            </div>
+          </div>
+      </div>
     </div>
     <br> 
-    
-    
-    
-
-
-<br>
-<button id="create">Create</button>
-
-
-
-
-<div id="player-stats"></div>
-<div id="enemy-stats"></div>
-<div id="combat-log"></div>
-
-
-
-
-
-
-
-
-</body>
+    <br>
+    <button id="create">Create</button>
+    <div id="player-stats"></div>
+    <div id="enemy-stats"></div>
+    <div id="combat-log"></div>
+  </body>
 </html>

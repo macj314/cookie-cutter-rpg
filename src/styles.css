@@ -45,3 +45,11 @@ body{
     float: right;
 }
 
+#mage-img, #rouge-img, #knight-img, #ranger-img{
+    right: 250px;
+    top: 150px;
+}
+
+#monster-img {
+    top:150px;
+}

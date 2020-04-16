@@ -5,6 +5,7 @@ import './styles.css';
 import $ from 'jquery';
 import { Character } from './char';
 import { Enemy } from './enemy';
+import { Battle } from './battle';
 // import { Enemy } from './enemy';
 
 
@@ -64,17 +65,18 @@ function displayCharacter(player){
 
 function displayEnemy(enemy){
   $("#enemy-display").show();
-  $("#e-name-display").text( `${enemy.enemyOne.name},` + ` ` +  `Level ${enemy.enemyOne.level}`);
+  $("#e-name-display").text( `${enemy.name},` + ` ` +  `Level ${enemy.level}`);
   $("#e-strength-display").text(`Strength: ${enemy.enemyOne.stats.strength}`);
   $("#e-int-display").text(`Intelligence: ${enemy.enemyOne.stats.intelligence}`);
   $("#e-dext-display").text(`Dexterity: ${enemy.enemyOne.stats.dexterity}`);
   $("#e-health-display").text(`Health: ${enemy.enemyOne.stats.health}`);
+  
 }
 
-function updateStats(player){
+function updateStats(player, enemy){
   setInterval(() => {
     displayCharacter(player);
-    
+    displayEnemy(enemy);
   }, 250);
 }
 
@@ -85,6 +87,7 @@ function updateStats(player){
 $(document).ready(function(){
   let player;
   let enemy;
+  let battle;
  
   $("#startTheGame").click(function(event){
     event.preventDefault();
@@ -103,7 +106,7 @@ $(document).ready(function(){
     $("#attack").show();
     $("#char-display").show();
     displayEnemy(enemy);
-    updateStats(player);
+    updateStats(player, enemy);
     showImg(player);
   });
 
@@ -112,24 +115,32 @@ $(document).ready(function(){
     player.smallHeal();
   });
 
-
-
-
-
-
-
-$("#attack").click(function(event){
-  event.preventDefault();
-  //battle.playerDoDamage(player, enemy);
-  // $("#combat-log").text(attack(player, enemy));
-  // isAlive(player);
-  // isAlive(enemy);
-  
-  $("#rouge-img").animate({
-    left: +150 }, function(){
-      $("#rouge-img").stop()
+  $("#attack").click(function(event){
+    event.preventDefault();
+    player = new Character($("#name").val(), $("#profession").val(),   $("#strength").val(), $("#intelligence").val(), $("#dexterity").val());
+    enemy = new Enemy(this.enemyOne);
+    battle = new Battle(enemy);
+    battle.playerDoDamage(player, enemy);
+    console.log(enemy.stats.health)
+    
+    $("#rouge-img").animate({
+      left: +100 }, function(){
+     
     });
-   });
-  
+    $("#knight-img").animate({
+      left: +100 }, function(){
+      
+    });
+
+    $("#mage-img").animate({
+      left: +100 }, function(){
+      
+    });
+
+      $("#ranger-img").animate({
+        left: +100 }, function(){
+        
+      });
+  });
 });
 
