@@ -2,9 +2,6 @@
 import { Character } from '../src/char';
 
 
-
-
-
 describe('Character', () => {
 jest.useFakeTimers();
 let char;
@@ -16,7 +13,7 @@ let char;
     char.stats.intelligence = 2,
     char.stats.dexterity = 2,
     char.stats.strength = 2
-    char.stats.xp = 7,
+    char.xP = 7,
     char.level = 1
   });
 
@@ -46,11 +43,12 @@ let char;
   });
 
   test('player level increase if xp is equal 7', () => {
-
+    
     char.levelUp();
     expect(char.stats.intelligence).toEqual(3);
     expect(char.stats.dexterity).toEqual(3);
     expect(char.stats.strength).toEqual(3);
+    expect(char.level).toEqual(2);
   
 
   })

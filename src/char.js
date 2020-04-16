@@ -3,8 +3,8 @@ export class Character {
     this.name = name;
     this.profession = profession;
     this.level = 1;
-    this.isAlive = true,
-    this.xP = 0
+    this.isAlive = true;
+    this.xP = 0;
     this.inv = {
       potionOne: 3,
       potionTwo: 1
@@ -57,14 +57,14 @@ export class Character {
 
 
   levelUp(){
-    if(this.xp == 7){
+    if(this.xP == 7){
       this.level+= 1;
       this.stats.health = 100;
-      this.stats.strength += 1
+      this.stats.strength += 1;
       this.stats.intelligence += 1;
-      this.stats.dexterity += 1
-    } else 
-    return this.xp = 0;
+      this.stats.dexterity += 1;
+      this.xP = 0
+    }
   }
 
   checkPlayer(){
@@ -74,7 +74,9 @@ export class Character {
   }
 
   doDamage(){
-    if(this.stats.strength)
+    if(this.stats.strength){
+
+    }
   }
 
 

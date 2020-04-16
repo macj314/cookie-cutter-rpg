@@ -26,6 +26,8 @@ import { Character } from './char';
 //  }
 //  return message;
 
+//function nextEnemy(){
+//  var i 
 
 function showImg(player) {
   if(player.profession == "Rouge"){
