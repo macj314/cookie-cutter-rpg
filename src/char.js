@@ -4,13 +4,13 @@ export class Character {
     this.profession = profession;
     this.level = 1;
     this.isAlive = true,
+    this.xP = 0
     this.inv = {
       potionOne: 3,
       potionTwo: 1
-
     };
     this.stats = {
-      health: 70,
+      health: 100,
       mana: 100,
       strength: strength,
       intelligence: intelligence,
@@ -40,19 +40,44 @@ export class Character {
       this.stats.health += 0;
       return true;
     }
-
-   
   }
+
+
+
+  levelUpTimer(){
+    setInterval(() =>{
+      this.level += 1;
+      this.stats.health = 100;
+      this.stats.strength +=1;
+      this.stats.intelligence +=1;
+      this.stats.dexterity +=1;
+    }, 60000)
+  };    
+
+
+
+  levelUp(){
+    if(this.xp == 7){
+      this.level+= 1;
+      this.stats.health = 100;
+      this.stats.strength += 1
+      this.stats.intelligence += 1;
+      this.stats.dexterity += 1
+    } else 
+    return this.xp = 0;
+  }
+
+  checkPlayer(){
+    if(this.stats.health <= 0){
+      this.isAlive = false;
+    }
+  }
+
+  doDamage(){
+    if(this.stats.strength)
+  }
+
+
+
+
 }
-
-
-  // levelUp(){
-  //   this.level += 1;
-  //   this.stats.strength +=1;
-  //   this.stats.intelligence +=1;
-  //   this.stats.dexterity +=1;
-  //   this.stats.health += 10;
-  //   this.stats.mana += 10;
-  // }    
-
-

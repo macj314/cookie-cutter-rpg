@@ -7,9 +7,24 @@ import { Character } from './char';
 // import { Enemy } from './enemy';
 
 
-//Start with character creation button => character creation screen where user puts in data
-
-
+//function attack(player, enemy){
+//  let message;
+//  var playerDmg = Math.floor(Math.random() * 5) + player.stats.strength;
+//  var enemyDmg = Math.floor(Math.random() * 5) + enemy.stats.strength;
+//  if(player.stats.dexterity > enemy.stats.dexterity){
+//    enemy.stats.health -= playerDmg;
+//    player.stats.health -= enemyDmg;
+//  }else{player.stats.health -= enemyDmg;
+//    enemy.stats.health -= playerDmg;
+//  }
+//  message = ("You did: " + playerDmg + " damage. And received: " + enemyDmg + "damage");
+//  if(player.stats.health <= 0){
+//    message += "You Have Died"
+//  }
+//  if(enemy.stats.health <= 0){
+//    message += "You have defeated your enemy!"
+//  }
+//  return message;
 
 
 function showImg(player) {
@@ -42,6 +57,14 @@ function displayCharacter(player){
   $("#mana-display").text(`Mana: ${player.stats.mana}`);        
 }
 
+//function displayEnemy(enemy){
+  // $("#name-display").text( `${enemy.name},` + ` ` +  `Level ${enemy.level}`);
+  // $("#strength-display").text(`Strength: ${enemy.stats.strength}`);
+  // $("#int-display").text(`Intelligence: ${enemy.stats.intelligence}`);
+  // $("#dext-display").text(`Dexterity: ${enemy.stats.dexterity}`);
+  // $("#health-display").text(`Health: ${enemy.stats.health}`);
+//}
+
 function updateStats(player){
   setInterval(() => {
     displayCharacter(player);
@@ -49,21 +72,7 @@ function updateStats(player){
   }, 250);
 }
 
-function charCheck(player){
-  if(player.stats.intelligence + player.stats.strength + player.stats.dexterity > 15){
-    $("create").show();
-    $("#char-creation").show()
-    $("#check-false").show()
-    $("#char-check").hide();
-  }else{
-    $("#create").hide();
-    $("#char-creation").hide();
-    $("#attack").show();
-    $("#char-display").show();
-    updateStats(player);
-    showImg(player);
-  }
-}
+
 
  
 
@@ -80,14 +89,14 @@ $(document).ready(function(){
  
   $("#create").click(function(event){
     event.preventDefault();
+    
     player = new Character($("#name").val(), $("#profession").val(),   $("#strength").val(), $("#intelligence").val(), $("#dexterity").val());
-    charCheck(player);
-    // $("#create").hide();
-    // $("#char-creation").hide();
-    // $("#attack").show();
-    // $("#char-display").show();
-    // updateStats(player);
-    // showImg(player);
+    $("#create").hide();
+    $("#char-creation").hide();
+    $("#attack").show();
+    $("#char-display").show();
+    updateStats(player);
+    showImg(player);
   });
 
   $("#small-heal").click(function(event){
@@ -100,9 +109,10 @@ $(document).ready(function(){
 
   $("#attack").click(function(event){
     event.preventDefault();
-    // attack(player, enemy);
-    // checkHealth(player, enemy);
-    $("#rouge-img").addClass(".stylie");
+    // $(#combat-log).text(attack(player, enemy));
+    // isAlive(player);
+    // isAlive(enemy);
+     $("#rouge-img").addClass(".rouge");
    
   })
 // });
