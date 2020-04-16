@@ -28,6 +28,8 @@ import { Character } from './char';
 
 //function nextEnemy(){
 //  var i 
+//  $("#monster-img").hide();
+//  $("")
 
 function showImg(player) {
   if(player.profession == "Rouge"){

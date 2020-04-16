@@ -42,15 +42,29 @@ let char;
   
   });
 
-  test('player level increase if xp is equal 7', () => {
+  test('player stats increase if level increase', () => {
     
     char.levelUp();
     expect(char.stats.intelligence).toEqual(3);
     expect(char.stats.dexterity).toEqual(3);
     expect(char.stats.strength).toEqual(3);
-    expect(char.level).toEqual(2);
+    
   
 
+  });
+
+  test('player level increase after hitting 7 xp' ,() => {
+    char.levelUp();
+    expect(char.level).toEqual(2);
+
+
+  });
+
+  test('if player health is 0 should be dead', () => {
+
+
+
+    
   })
     
 
