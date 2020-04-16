@@ -48,7 +48,7 @@ export class Enemy {
    
    enemyBoss(){
     this.name = "Pauline The Panda",
-    this.level 1,
+    this.level = 1,
     this.stats = {
         health: 100,
         strength: 5,
@@ -60,16 +60,16 @@ export class Enemy {
 
 
 
-   randomBossGenerator(){
-    const bossArray = {
-        enemyOne,
-        enemyTwo,
-        enemyThree,
-        enemyFour,
-        enemyBoss
-    }
-    const randomEnemy = bossArray[Math.floor(Math.random() * bossArray.length)];
+  //  randomBossGenerator(){
+  //   const bossArray = {
+  //       enemyOne,
+  //       enemyTwo,
+  //       enemyThree,
+  //       enemyFour,
+  //       enemyBoss
+  //   }
+  //   const randomEnemy = bossArray[Math.floor(Math.random() * bossArray.length)];
 
-   }
+  //  }
 
   };

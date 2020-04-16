@@ -14,9 +14,9 @@ export class Battle
   attack(){
     if( player.dexerity > enemy.dexerity){
     enemy.health -= playerDmg;
-    player.health -= npcDmg
+    player.health -= npcDmg;
     }else{        
-    player.health -= npcDmg
+    player.health -= npcDmg;
     enemy.health -= playerDmg;
     }
   }
