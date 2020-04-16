@@ -1,28 +1,30 @@
-// import { Character } from './char';
-// import { Enemy } from './enemy';
+import { Character } from './char';
+import { Enemy } from './enemy';
 
-// export class Battle {
-//   let player;
-//   let enemy;
+export function Battle(){
+   
+    let player = new Character()
+    let enemy = new Enemy(this.enemyOne)
+    
+    Battle.prototype.playerDoDamage = function (){
+        if(player.stats.strength <= 2){
+            enemy.enemyOne.stats.health -= 15;
+        } else if(player.stats.strength > 2 && player.stats.strength <= 4){
+            enemy.enemyOne.stats.health -= 25
+        } else {
+            enemy.enemyOne.stats.health-= 34
+        }
+    }
+};
 
-  
-  
-//   attack(player, enemy) {
+   
 
-//     let playerDmg = Math.floor(Math.random() * 5) + player.stats.strength;
-//     let npcDmg = Math.floor(Math.random() * 3) + enemy.stats.strength;
-//     console.log(playerDmg);
-//     console.log(npcDmg);
-//     console.log("working");
-//     if( player.stats.dexerity > enemy.stats.dexerity){
-//     enemy.health -= playerDmg;
-//     player.health -= npcDmg;
-//     }else{        
-//     player.health -= npcDmg;
-//     enemy.health -= playerDmg;
-//     }
-//     return [player.health, enemy.health];
-//   }
+
+
+
+
+
+
 
 //   checkHealth(player,enemy) {
 //     if(isAlive = false){

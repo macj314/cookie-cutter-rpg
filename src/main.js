@@ -62,11 +62,11 @@ function displayCharacter(player){
 }
 
 //function displayEnemy(enemy){
-  // $("#name-display").text( `${enemy.name},` + ` ` +  `Level ${enemy.level}`);
-  // $("#strength-display").text(`Strength: ${enemy.stats.strength}`);
-  // $("#int-display").text(`Intelligence: ${enemy.stats.intelligence}`);
-  // $("#dext-display").text(`Dexterity: ${enemy.stats.dexterity}`);
-  // $("#health-display").text(`Health: ${enemy.stats.health}`);
+// $("#name-display").text( `${enemy.name},` + ` ` +  `Level ${enemy.level}`);
+// $("#strength-display").text(`Strength: ${enemy.stats.strength}`);
+// $("#int-display").text(`Intelligence: ${enemy.stats.intelligence}`);
+// $("#dext-display").text(`Dexterity: ${enemy.stats.dexterity}`);
+// $("#health-display").text(`Health: ${enemy.stats.health}`);
 //}
 
 function updateStats(player){
@@ -107,17 +107,16 @@ $(document).ready(function(){
     event.preventDefault();
     player.smallHeal();
   });
-})
+});
 
 
 
-  $("#attack").click(function(event){
-    event.preventDefault();
-    // $(#combat-log).text(attack(player, enemy));
-    // isAlive(player);
-    // isAlive(enemy);
-     $("#rouge-img").addClass(".rouge");
-   
-  })
+$("#attack").click(function(event){
+  event.preventDefault();
+  // $("#combat-log").text(attack(player, enemy));
+  // isAlive(player);
+  // isAlive(enemy);
+  $("#rouge-img").addClass(".rouge");
+});
 // });
 // }

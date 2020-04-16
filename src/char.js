@@ -34,7 +34,7 @@ export class Character {
     if(this.inv.potionTwo >=0){
       this.stats.health += 20;
       if(this.stats.healths > 100){
-        this.stats.health = 100
+        this.stats.health = 100;
       }
     } else {
       this.stats.health += 0;
@@ -51,8 +51,8 @@ export class Character {
       this.stats.strength +=1;
       this.stats.intelligence +=1;
       this.stats.dexterity +=1;
-    }, 60000)
-  };    
+    }, 60000);
+  }    
 
 
 
@@ -63,7 +63,7 @@ export class Character {
       this.stats.strength += 1;
       this.stats.intelligence += 1;
       this.stats.dexterity += 1;
-      this.xP = 0
+      this.xP = 0;
     }
   }
 
@@ -74,8 +74,8 @@ export class Character {
   }
 
   doDamage(){
-    if(this.stats.strength){
-
+    if(this.stats.strength < 2){
+      
     }
   }
 
