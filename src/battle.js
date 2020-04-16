@@ -3,15 +3,13 @@ import { Enemy } from './char';
 
 export class Battle
 {
-    // var playerTurn;
-    // var enemyTurn;
-    //turnCounter
-  startBattle(player, enemy){
-    playerDmg = Math.floor(random() * 5) + strength;
-    npcDmg = Math.floor(random() * 3) + strength;
-  }
-
-  attack(){
+  attack(player, enemy){
+   
+    let playerDmg = Math.floor(Math.random() * 5) + player.stats.strength;
+    let npcDmg = Math.floor(Math.random() * 3) + strength;
+    console.log(playerDmg);
+    console.log(npcDmg);
+    console.log("working");
     if( player.dexerity > enemy.dexerity){
     enemy.health -= playerDmg;
     player.health -= npcDmg;
@@ -19,5 +17,17 @@ export class Battle
     player.health -= npcDmg;
     enemy.health -= playerDmg;
     }
+    return [player.health, enemy.health];
   }
+
+  checkHealth(player,enemy){
+    if(isAlive = false){
+      alert("you died");
+    }else {
+      alert("you win");
+    }
+    
+  }
+
+
 }

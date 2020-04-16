@@ -3,13 +3,14 @@ export class Character {
     this.name = name;
     this.profession = profession;
     this.level = 1;
+    this.isAlive = true,
     this.inv = {
       potionOne: 3,
       potionTwo: 1
 
     };
     this.stats = {
-      health: 100,
+      health: 70,
       mana: 100,
       strength: strength,
       intelligence: intelligence,
@@ -20,6 +21,9 @@ export class Character {
   smallHeal(){
     if(this.inv.potionOne >= 0){
       this.stats.health += 10;
+      if(this.stats.health > 100){
+        this.stats.health = 100
+      }
     } else {
       this.stats.heal += 0;
       return true;
@@ -30,11 +34,10 @@ export class Character {
     if(this.inv.potionTwo >=0){
       this.stats.health += 20;
     } else {
-      this.stats.health += 0
-      return true
+      this.stats.health += 0;
+      return true;
     }
   }
-
   // levelUp(){
   //   this.level += 1;
   //   this.stats.strength +=1;
@@ -43,5 +46,5 @@ export class Character {
   //   this.stats.health += 10;
   //   this.stats.mana += 10;
   // }    
-}
 
+}
