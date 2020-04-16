@@ -70,8 +70,9 @@ let enemy;
   });
 
  test('player does damage to enemy depending on strength', () =>{
-  battle.playerDoDamage();
-  expect(enemy.enemyOne.stats.health).toEqual(85);
+  expect(battle.playerDoDamage()).toEqual(85);
+  // expect(enemy.enemyOne.stats.health).toEqual(85);
  })
 
 });
+

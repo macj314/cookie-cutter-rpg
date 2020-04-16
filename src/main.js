@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from 'jquery';
 import { Character } from './char';
+import { Enemy } from './enemy';
 // import { Enemy } from './enemy';
 
 
@@ -61,13 +62,14 @@ function displayCharacter(player){
   $("#mana-display").text(`Mana: ${player.stats.mana}`);        
 }
 
-//function displayEnemy(enemy){
-// $("#name-display").text( `${enemy.name},` + ` ` +  `Level ${enemy.level}`);
-// $("#strength-display").text(`Strength: ${enemy.stats.strength}`);
-// $("#int-display").text(`Intelligence: ${enemy.stats.intelligence}`);
-// $("#dext-display").text(`Dexterity: ${enemy.stats.dexterity}`);
-// $("#health-display").text(`Health: ${enemy.stats.health}`);
-//}
+function displayEnemy(enemy){
+  $("#enemy-display").show();
+  $("#e-name-display").text( `${enemy.enemyOne.name},` + ` ` +  `Level ${enemy.enemyOne.level}`);
+  $("#e-strength-display").text(`Strength: ${enemy.enemyOne.stats.strength}`);
+  $("#e-int-display").text(`Intelligence: ${enemy.enemyOne.stats.intelligence}`);
+  $("#e-dext-display").text(`Dexterity: ${enemy.enemyOne.stats.dexterity}`);
+  $("#e-health-display").text(`Health: ${enemy.enemyOne.stats.health}`);
+}
 
 function updateStats(player){
   setInterval(() => {
@@ -82,6 +84,7 @@ function updateStats(player){
 
 $(document).ready(function(){
   let player;
+  let enemy;
  
   $("#startTheGame").click(function(event){
     event.preventDefault();
@@ -93,12 +96,13 @@ $(document).ready(function(){
  
   $("#create").click(function(event){
     event.preventDefault();
-    
+    enemy = new Enemy(this.enemyOne);
     player = new Character($("#name").val(), $("#profession").val(),   $("#strength").val(), $("#intelligence").val(), $("#dexterity").val());
     $("#create").hide();
     $("#char-creation").hide();
     $("#attack").show();
     $("#char-display").show();
+    displayEnemy(enemy);
     updateStats(player);
     showImg(player);
   });
@@ -107,16 +111,25 @@ $(document).ready(function(){
     event.preventDefault();
     player.smallHeal();
   });
-});
+
+
+
+
 
 
 
 $("#attack").click(function(event){
   event.preventDefault();
+  //battle.playerDoDamage(player, enemy);
   // $("#combat-log").text(attack(player, enemy));
   // isAlive(player);
   // isAlive(enemy);
-  $("#rouge-img").addClass(".rouge");
+  
+  $("#rouge-img").animate({
+    left: +150 }, function(){
+      $("#rouge-img").stop()
+    });
+   });
+  
 });
-// });
-// }
+

@@ -73,11 +73,11 @@ export class Character {
     }
   }
 
-  doDamage(){
-    if(this.stats.strength < 2){
-      
-    }
-  }
+  // doDamage(){
+  //   if(this.stats.strength < 2){
+
+  //   }
+  // }
 
 
 

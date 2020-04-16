@@ -31,34 +31,53 @@
     <input type="number" name="dexterity" id="dexterity" min="1" max="5" required >
   </div>
 
-  <img id="monster-img" src="https://i.pinimg.com/originals/ff/bc/75/ffbc753e1e40fe35df874b6b685b253b.gif">
+  
  
     <div id="char-display">
       <h2>Your Adventurer</h2>
       <div class="row char-row">
+        <div class="col-md-2">
+          <div id="name-display"></div>
+          <div id="strength-display"></div>
+          <div id="int-display"></div> 
+          <div id="dext-display"></div>    
+          <div id="mana-display"></div>
+          <div id="health-display"></div>
+          <div id="pot1-display"></div>
+          <div id="pot2-display"></div>
+          <br>
+          <button id="attack">attack</button>
+        </div>
+        <div class="col-md-2">
+          <button id="small-heal" type="button">Small Potion Heal</button>
+          <button id="big-heal" type="button">Large Potion Heal</button>
+        </div>
           <img id="rouge-img" src="https://cdn2.scratch.mit.edu/get_image/user/35825441_60x60.png">
           <img id="ranger-img" src="https://i.imgur.com/kJtPrT0.gif">
           <img id="knight-img" src="https://i.pinimg.com/originals/2c/78/79/2c7879557f1cab6d9c3eef2744b7b124.gif">
           <img id="mage-img" src="https://cdn.pixilart.com/photos/large/39a2a3f8b412f19.gif">
+          <img id="monster-img" src="https://i.pinimg.com/originals/ff/bc/75/ffbc753e1e40fe35df874b6b685b253b.gif">
+      <div id="enemy-display">
+        <div class="row-enemy">
           <div class="col-md-2">
-            <div id="name-display"></div>
-            <div id="strength-display"></div>
-            <div id="int-display"></div> 
-            <div id="dext-display"></div>    
-            <div id="mana-display"></div>
-            <div id="health-display"></div>
-            <div id="pot1-display"></div>
-            <div id="pot2-display"></div>
-            <br>
-            <button id="attack">attack</button>
+            <div id="e-name-display"></div>
+            <div id="e-strength-display"></div>
+            <div id="e-int-display"></div> 
+            <div id="e-dext-display"></div>    
+            <div id="e-mana-display"></div>
+            <div id="e-health-display"></div>
+            <div id="e-pot1-display"></div>
+            <div id="e-pot2-display"></div>
           </div>
-          <div class="col-md-2">
-            <button id="small-heal" type="button">Small Potion Heal</button>
-            <button id="big-heal" type="button">Large Potion Heal</button>
-          </div>
+        </div>
       </div>
+  </div>
       
     </div>
+    <br> 
+    
+    
+    
 
 
 <br>
